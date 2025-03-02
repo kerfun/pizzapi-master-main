@@ -42,12 +42,12 @@ class Menu(object):
         self.root_categories = {}
         self.country = COUNTRY_USA
 
-        if self.variants:
-            self.products = self.parse_items(data['Products'])
-            self.coupons = self.parse_items(data['Coupons'])
-            self.preconfigured = self.parse_items(data['PreconfiguredProducts'])
-            for key, value in data['Categorization'].items():
-                self.root_categories[key] = self.build_categories(value)
+        # if self.variants:
+        #     self.products = self.parse_items(data['Products'])
+        #     self.coupons = self.parse_items(data['Coupons'])
+        #     self.preconfigured = self.parse_items(data['PreconfiguredProducts'])
+        #     for key, value in data['Categorization'].items():
+        #         self.root_categories[key] = self.build_categories(value)
 
     @classmethod
     def from_store(cls, store_id, lang='en', country=COUNTRY_USA):
